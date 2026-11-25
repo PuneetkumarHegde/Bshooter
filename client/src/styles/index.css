@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #0b0a18;
+  color: #e9e8f5;
+  font-family: 'Nunito', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Prevent the page from scrolling while actively dragging to aim (spec §51). */
+.no-scroll-touch {
+  touch-action: none;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl px-5 py-3 font-display font-bold
+      transition-transform active:scale-95 focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-400/60 select-none;
+  }
+  .btn-primary {
+    @apply btn bg-gradient-to-b from-brand-400 to-brand-600 text-white shadow-glow hover:brightness-110;
+  }
+  .btn-ghost {
+    @apply btn bg-white/5 text-white/90 hover:bg-white/10 border border-white/10;
+  }
+  .btn-danger {
+    @apply btn bg-gradient-to-b from-rose-400 to-rose-600 text-white hover:brightness-110;
+  }
+  .card {
+    @apply rounded-3xl border border-white/10 bg-night-800/70 backdrop-blur p-5 shadow-xl;
+  }
+  .input {
+    @apply w-full rounded-xl border border-white/10 bg-night-900/70 px-4 py-3 text-white
+      placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-brand-400;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 text-sm font-semibold;
+  }
+}
+
+/* Loading skeleton shimmer */
+.skeleton {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 25%, rgba(255, 255, 255, 0.12) 37%, rgba(255, 255, 255, 0.04) 63%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+
+/* Respect users who prefer reduced motion (spec §89 accessibility). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#121022" />
+
+    <!--
+      Browser title, SEO + Open Graph metadata are driven by VITE_GAME_NAME.
+      Vite replaces %VITE_GAME_NAME% at build time, so there is no hardcoded name.
+    -->
+    <title>%VITE_GAME_NAME% — Aim. Match. Pop. Rescue.</title>
+    <meta name="description" content="%VITE_GAME_NAME% is a colorful full-stack bubble shooter: aim, match 3+ bubbles, pop groups, rescue hidden friends, and climb the leaderboard." />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="%VITE_GAME_NAME%" />
+    <meta property="og:description" content="Aim. Match. Pop. Rescue. Play %VITE_GAME_NAME% now." />
+    <meta property="og:site_name" content="%VITE_GAME_NAME%" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="%VITE_GAME_NAME%" />
+    <meta name="twitter:description" content="Aim. Match. Pop. Rescue. Play %VITE_GAME_NAME% now." />
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icon-192.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "bshooter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A full-stack bubble shooter web game (environment-driven game name). React + Vite frontend, Node + Express + MongoDB backend.",
+  "scripts": {
+    "install:all": "npm --prefix client install && npm --prefix server install",
+    "dev:client": "npm --prefix client run dev",
+    "dev:server": "npm --prefix server run dev",
+    "build": "npm --prefix client run build",
+    "seed": "npm --prefix server run seed",
+    "start:server": "npm --prefix server start"
+  },
+  "workspaces": [
+    "client",
+    "server"
+  ]
+}
